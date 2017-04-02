@@ -1,0 +1,15 @@
+PODS:
+  - FLEX (2.4.0)
+  - SnapKit (3.1.2)
+
+DEPENDENCIES:
+  - FLEX (~> 2.0)
+  - SnapKit (~> 3.1.2)
+
+SPEC CHECKSUMS:
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+
+PODFILE CHECKSUM: 9047a6ed984bfe4ba73db911d9229089dc0a1e33
+
+COCOAPODS: 1.1.1
