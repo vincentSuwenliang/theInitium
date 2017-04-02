@@ -64,13 +64,14 @@ class RootViewController: UIViewController {
 
         let barHeight = self.navigationController?.navigationBar.frame.size.height
         let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-        let imageView = UIImageView(frame: CGRect(x: 0 , y: (barHeight ?? 0 + statusBarHeight), width: fixedLength, height: fixedLength))
+        let imageView = UIImageView(frame: CGRect(x: 0 , y: ((barHeight ?? 0) + statusBarHeight), width: fixedLength, height: fixedLength))
+        imageView.downloadedFrom(url: url)
         imageView.contentMode = .scaleAspectFill
         imageView.alpha = 0
-        imageView.downloadedFrom(url: url)
+
         self.view.addSubview(imageView)
 
-        UIView.animate(withDuration: 5, animations: {
+        UIView.animate(withDuration: 3, animations: {
             imageView.alpha = 1
         })
     }
