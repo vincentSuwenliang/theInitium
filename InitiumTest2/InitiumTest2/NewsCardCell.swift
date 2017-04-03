@@ -33,17 +33,20 @@ extension UILabel {
     }
 }
 
-class NewsCardCell: UITableViewCell {
+class NewsCardCell: UICollectionViewCell {
 
     private var channelView = UIView()
     private var channelLabel = UILabel.newsCellLabel(fontSize: 12,numberOfLines: 1)
     private var headlineLabel = UILabel.newsCellLabel(fontSize: 18)
     private let margin:CGFloat = 10
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpView()
+    }
 
-        contentView.addSubview(channelView)
+    func setUpView() {
+        addSubview(channelView)
         channelView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(margin)
             make.leading.equalToSuperview().offset(margin)
@@ -55,16 +58,15 @@ class NewsCardCell: UITableViewCell {
             make.edges.equalToSuperview().inset(UIEdgeInsetsMake(margin, 0, 0, 0))
         }
 
-        contentView.addSubview(headlineLabel)
+        addSubview(headlineLabel)
         headlineLabel.snp.makeConstraints { make in
             make.top.greaterThanOrEqualTo(channelView.snp.bottom).offset(margin)
             make.leading.equalToSuperview().offset(margin)
             make.trailing.equalToSuperview().offset(-margin)
             make.bottom.equalToSuperview().offset(-margin)
         }
-
-
     }
+
 
     override func layoutSubviews() {
         super.layoutSubviews()
