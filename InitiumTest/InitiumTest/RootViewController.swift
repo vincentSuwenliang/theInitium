@@ -33,7 +33,7 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-//        print("")
+//        print("1")
         rightBarButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: #selector(RootViewController.onClickRightNavButton(_:)))
         self.navigationItem.setRightBarButton(rightBarButton, animated: true)
 
