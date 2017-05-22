@@ -28,11 +28,12 @@ class RootViewController: UIViewController {
     let screenSize = UIScreen.main.bounds.size
 
     var rightBarButton: UIBarButtonItem?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-
+//        print("")
         rightBarButton = UIBarButtonItem(title: "Right", style: .plain, target: self, action: #selector(RootViewController.onClickRightNavButton(_:)))
         self.navigationItem.setRightBarButton(rightBarButton, animated: true)
 
